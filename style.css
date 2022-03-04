@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Kumbh Sans';
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    font-size: 12px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 2rem;
+}
+.car-faq{
+    background: white;
+    text-align: center;
+    padding: 2rem;
+    clear: both;
+    position: relative;
+    border-radius: 20px;
+}
+
+
+h1{
+    margin-bottom: 2rem;
+}
+.lista {
+    position: relative;
+    text-align: start;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding-bottom: 8px;
+    margin-bottom: 1rem;
+}
+input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  label{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  label img{
+    width: 12px;
+    height: 10px;
+}
+  p {
+     color: hsl(240, 6%, 50%);
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 7px;
+    transition: max-height 0.4s ease;
+  }
+  
+  
+
+  [type="radio"]:checked ~ label {
+    z-index: 2;
+    
+  }
+
+  [type="radio"]:checked ~ label ~ p {
+   
+    max-height: 80px;
+  }
+  .close-tab {
+   
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .close-tab label {
+    
+    background: white;
+    font-weight: 700;
+  }
+  [type="radio"]:checked ~ label ~ .close-tab  {
+    z-index: 4;
+   
+  }
+.imagens{
+  width: 230px;
+  position: relative;
+  margin-top: -137px;
+  background-image: url(images/bg-pattern-mobile.svg);
+  background-size: contain;
+  background-position: bottom;
+  padding-bottom: 26px;
+  background-repeat: no-repeat;
+  
+  
+}
+.imagens-2{
+  
+  position: relative;
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-position: -32rem -18rem;
+  padding-bottom: 44px;
+  padding-top: 53px;
+  right: 16%;
+  background-repeat: no-repeat;
+  display: none;
+  
+}
+.visible-lg{
+  display: none;
+}
+.respuestas{
+  color: hsl(240, 6%, 50%);
+  ;
+}
+label:hover{
+  color: orange;
+  cursor: pointer;
+}
+@media (min-width: 800px) {
+  .visible-lg { 
+    display: block; 
+    position: absolute;
+    left: -122px;
+    top: 192px;    
+  }
+  .car-faq{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    max-width: 1052px;
+    padding-bottom: 0;
+    padding-top: 0px;
+    padding-right: 6rem;
+}
+.preguntas{
+  text-align: start;
+  width: 359px;
+}
+.imagens-2 {
+    display: block;
+}
+.imagens{
+  display: none;
+}
+.imgeness{
+  overflow: hidden;
+  max-width: 29rem;
+}
+
+
+
+}
+  
